@@ -17,6 +17,7 @@ const About = () => {
               <p>Hi. I'm Jarek, nice to meet you. Please take a look around.</p>
             </div>
             <div>
+              {/* TODO : fill with correct content  */}
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic alias, officiis cupiditate aut magnam veritatis itaque deserunt. Unde, quam qui? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, ut! Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic alias, officiis cupiditate aut magnam veritatis itaque deserunt. Unde, quam qui? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, ut!</p>  
             </div>
           </div>
