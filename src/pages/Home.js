@@ -1,7 +1,7 @@
-import React from 'react'
-import About from '../components/About'
-import Hero from '../components/Hero'
-import Technologies from '../components/Technologies'
+import React from 'react';
+import About from '../components/About';
+import Hero from '../components/Hero';
+import Technologies from '../components/Technologies';
 
 const Home = () => {
   return (
@@ -10,7 +10,7 @@ const Home = () => {
         <About />
         <Technologies />        
     </main>
-  )
-}
+  );
+};
 
 export default Home

@@ -1,8 +1,44 @@
-import React from 'react'
+import React from 'react';
+import {FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <section className='w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center p-4'>
+        <div className='z-10 flex flex-col items-center mt-11'>
+          <p className='text-4xl font-bold inline border-b-4 border-pink-600 text-gray-300'>
+            Contact
+          </p>
+          <p className='text-gray-300 py-4 text-center'>
+            Submit the form below or shoot me an email - charchula@gmail.com
+          </p>
+        </div>
+        {/* button container */}
+        <div className='lg:hidden'>
+          <a 
+            className='text-white w-32 border-2 hover:bg-pink-600 hover:border-pink-600 hover:scale-110 duration-200 px-4 py-1 my-4 flex items-center'
+            href='/'
+          >
+            Linkedin
+            <FaLinkedin size={20} className='ml-2'/>                     
+          </a>
+          <a 
+            className='text-white w-32 border-2 hover:bg-pink-600 hover:border-pink-600 hover:scale-110 duration-200 px-4 py-1 my-4 mx-auto flex items-center'
+            href='/'
+          >
+            Github
+            <FaGithub size={20} className='ml-5'/>             
+          </a>
+        </div>
+        <form className='flex flex-col max-w-[1000px] w-full'>
+          <input className='bg-[#ccd6f6] p-2' type="text" placeholder='Name' name='name' />
+          <input className='my-4 p-2 bg-[#ccd6f6]' type="email" placeholder='Email' name='email' />
+          <textarea className='bg-[#ccd6f6] p-2' name="message" rows="10" placeholder='Message'></textarea>
+          <button 
+          className='text-white border-2 hover:bg-pink-600 hover:border-pink-600 hover:scale-110 duration-200 px-4 py-3 my-8 mx-auto flex items-center'>
+            Let's Collaborate
+          </button>
+        </form>
+    </section>
   )
 }
 

@@ -39,6 +39,7 @@ const exp =[
         name: 'test8',
         image: 'https://cdn.pixabay.com/photo/2015/11/03/09/01/question-mark-1019935_960_720.jpg',
     },
+    
 ];
 
 export default exp;

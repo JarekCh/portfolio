@@ -52,8 +52,8 @@ const Projects = () => {
   )})
 
   return (
-    <main className='w-full h-[calc(100vh-80px)] fixed bottom-0 text-gray-300 bg-[#0a192f]'>
-      <section className='max-w-[1600px] mx-auto p-4 flex flex-col items-center w-full h-full'>
+    <section className='w-full h-full mt-11 text-gray-300 bg-[#0a192f]'>
+      <div className='max-w-[1600px] mx-auto p-4 flex flex-col items-center w-full h-full'>
         <header className='pb-8 flex flex-col items-center'>
           <title className='text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600'>Projects</title>
           <p className='py-6'>Check out some of my recent projects</p>
@@ -62,8 +62,8 @@ const Projects = () => {
         <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4 xl:grid-cols-4'>
           {projects}
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
   )
 }
 
