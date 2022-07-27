@@ -2,7 +2,7 @@ import React from 'react'
 
 const Technologies = () => {
   return (
-    <div>Technologies</div>
+    <section className='w-full h-screen bg-[#0a192f] text-gray-300'>Technologies</section>
   )
 }
 

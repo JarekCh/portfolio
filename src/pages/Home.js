@@ -5,11 +5,10 @@ import Technologies from '../components/Technologies'
 
 const Home = () => {
   return (
-    <div>
-      {/* add component header */}
+    <div>      
         <Hero />
-        <Technologies />
         <About />
+        <Technologies />        
     </div>
   )
 }
