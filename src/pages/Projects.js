@@ -17,10 +17,9 @@ const Projects = () => {
         items-center 
         mx-auto 
         h-72
-        w-52
+        w-72
         lg:h-80
-        2xl:h-96
-        lg:w-64
+        2xl:h-96        
         2xl:w-80
         content-div' 
       key={id}   
@@ -60,7 +59,7 @@ const Projects = () => {
           <p className='py-6'>Check out some of my recent projects</p>
         </header>
         {/* projects container */}
-        <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4 xl:grid-cols-4'>
+        <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4 xl:grid-cols-4'>
           {projects}
         </div>
       </section>
