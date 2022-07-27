@@ -5,11 +5,11 @@ import Technologies from '../components/Technologies'
 
 const Home = () => {
   return (
-    <div>      
+    <main>      
         <Hero />
         <About />
         <Technologies />        
-    </div>
+    </main>
   )
 }
 
