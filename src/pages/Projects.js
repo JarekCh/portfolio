@@ -1,13 +1,13 @@
 import React from 'react';
 import tempProjects from '../assets/temp/temp_projects';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Projects = () => {  
-  // TODO: ADD motion library 
   const projects = tempProjects.map((project) => {
     const {id, name, image } = project;
     return (
-    <article 
+    <motion.article 
       style={{backgroundImage: `url(${image})`}}
       className='
         shadow-lg shadow-[#040c16] 
@@ -24,7 +24,10 @@ const Projects = () => {
         2xl:h-96        
         2xl:w-80
         content-div' 
-      key={id}   
+      key={id}
+      animate={{scale: 1}}
+      initial={{scale: 0}} 
+      transition={{duration: 0.7}}  
     >
       <div className='opacity-0 group-hover:opacity-100'>        
         <div className='text-2xl font-bold text-white tracking-wider text-center'>
@@ -53,7 +56,7 @@ const Projects = () => {
           </Link>
         </div>
       </div>
-    </article>
+    </motion.article>
   )})
 
   return (

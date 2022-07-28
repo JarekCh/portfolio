@@ -8,7 +8,7 @@ const SingleProject = () => {
   const { projectId } = useParams();
   const project = tempProjects.find((project) => project.id === projectId);
   
-
+  // TODO: with backend add key prop
   const techStack = project.stack.map((item) => {    
     return (
       <div key={item.index} className='flex items-center gap-2 mr-2 ml-2'>
@@ -27,7 +27,7 @@ const SingleProject = () => {
           {project.name}
         </div>
         <div className='flex flex-col items-center'>
-          <img src={project.image} className='w-10/12 p-4'/> 
+          <img src={project.image} alt={project.name} className='w-10/12 p-4'/> 
           {/* techStack container */}
           <div className='p-4 lg:w-9/12 sm:w-full grid grid-cols-2 md:grid-cols-3 max-w-lg'>
             {techStack}
