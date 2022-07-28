@@ -1,7 +1,5 @@
 import React from 'react';
 import {FaGithub, FaLinkedin } from 'react-icons/fa';
-import { motion, useTime  } from 'framer-motion';
-import { duration } from '@mui/material';
 
 const Contact = () => {
   const rowsResize = () => {
@@ -40,11 +38,11 @@ const Contact = () => {
           <input className='bg-[#ccd6f6] p-2' type="text" placeholder='Name' name='name' />
           <input className='my-4 p-2 bg-[#ccd6f6]' type="email" placeholder='Email' name='email' />
           <textarea className='bg-[#ccd6f6] p-2' name="message" rows={rowsResize()}  placeholder='Message'></textarea>
-          <motion.button 
+          <button 
             className='text-white border-2 hover:bg-pink-600 hover:border-pink-600 hover:scale-110 duration-200 px-4 py-3 my-8 mx-auto flex items-center' 
           >
             Let's Collaborate
-          </motion.button>
+          </button>
         </form>
     </section>
   )

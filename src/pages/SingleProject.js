@@ -20,7 +20,7 @@ const SingleProject = () => {
   
   return (
     <section className='w-full h-screen mt-14 pb-2 px-2 pt-10 text-gray-300 bg-[#0a192f] flex justify-center items-top'>      
-      <article className='shadow-inner shadow-slate-200 flex flex-col  bg-slate-500 max-w-[900px] max-h-[1100px] h-auto rounded-lg m-3'>
+      <article className='shadow-inner shadow-slate-200 flex flex-col  bg-slate-500 max-w-[900px]  max-h-[1100px] rounded-lg m-3'>
         <div 
           className='p-4 w-full text-center text-4xl font-bold'
         >
