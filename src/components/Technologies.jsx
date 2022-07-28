@@ -6,7 +6,7 @@ const Technologies = () => {
     const {id, name, image} = item;
 
     return (
-      <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500' key={id}>
+      <div id='technologies' className='shadow-md shadow-[#040c16] hover:scale-110 duration-500' key={id}>
         <img className='w-20 mx-auto' src={image} alt={name} />
         <p>{name}</p>
       </div>

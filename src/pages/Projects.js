@@ -1,7 +1,9 @@
 import React from 'react';
 import tempProjects from '../assets/temp/temp_projects';
+import { Link } from 'react-router-dom';
 
 const Projects = () => {  
+  // TODO: ADD motion library 
   const projects = tempProjects.map((project) => {
     const {id, name, image } = project;
     return (
@@ -41,11 +43,15 @@ const Projects = () => {
           </a>
         </div>
         <div>
-          <a href='/'>
-            <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg w-11/12'>
+          <button
+              className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg w-11/12'         
+          >
+            <Link 
+              to={`/projects/${project.id}`}
+            >
               More info...
-            </button>
-          </a>
+            </Link>
+          </button>
         </div>
       </div>
     </article>

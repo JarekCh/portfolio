@@ -15,7 +15,7 @@ function App() {
           <Route index element={<Home />} />          
           <Route path='projects' element={<SharedProjectLayout />}>
             <Route index element={<Projects />} />
-            <Route path=':id' element={<SingleProject />} />
+            <Route path=':projectId' element={<SingleProject />} />
           </Route>
           <Route path='contact' element={<Contact />} />  
           <Route path='*' element={<Error />} />        

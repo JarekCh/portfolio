@@ -2,8 +2,9 @@ import React from 'react';
 import { HiArrowNarrowRight } from 'react-icons/hi';
 
 const Hero = () => {
+  // TODO: ADD motion library 
   return (
-    <section className='bg-[#0a192f] w-full h-screen'>
+    <section id='hero' className='bg-[#0a192f] w-full h-screen'>
       {/* container */}
       <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
         <p className='text-pink-600 '>Hello, my name is</p>
