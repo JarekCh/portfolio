@@ -30,21 +30,21 @@ const Projects = () => {
         <div className='text-2xl font-bold text-white tracking-wider text-center'>
           {name}
         </div>        
-        <div className='pt-8 text-center'>
-          <a href='/'>
-            <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+        <div className='pt-8 text-center m-2 grid grid-cols-2'>
+          <div>
+            <a href='/' className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
               Live
-            </button>
-          </a>
-          <a href='/'>
-            <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+            </a>
+          </div>
+          <div>
+            <a href='/' className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
               Code
-            </button>
-          </a>
+            </a >
+          </div>
         </div>
-        <div>
+        <div className='flex justify-center'>
           <button
-              className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg w-11/12'         
+              className='w-10/12 text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'         
           >
             <Link 
               to={`/projects/${project.id}`}

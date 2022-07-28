@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 const SharedProjectLayout = () => {
   return (
     <>
-        <div>projects</div>
+        <div>.</div>
         <Outlet />
     </>
   )
