@@ -9,9 +9,9 @@ const SingleProject = () => {
   const project = tempProjects.find((project) => project.id === projectId);
   
   // TODO: with backend add key prop
-  const techStack = project.stack.map((item) => {    
+  const techStack = project.stack.map((item, i) => {    
     return (
-      <div key={item.index} className='flex items-center gap-2 mr-2 ml-2'>
+      <div key={i} className='flex items-center gap-2 mr-2 ml-2'>
         <FaGithub size={20}/>
         <p className='mr-2'>{item.name}</p>
       </div>
@@ -19,8 +19,8 @@ const SingleProject = () => {
   });  
   
   return (
-    <section className='w-full h-screen mt-14 pb-2 px-2 pt-10 text-gray-300 bg-[#0a192f] flex justify-center items-top'>      
-      <article className='shadow-inner shadow-slate-200 flex flex-col  bg-slate-500 max-w-[900px]  max-h-[1100px] rounded-lg m-3'>
+    <section className='w-full h-full pb-2 px-2 pt-10 text-gray-300 bg-[#0a192f] flex justify-center items-top'>      
+      <article className='shadow-inner shadow-slate-200 flex flex-col  bg-slate-500 max-w-[900px] max-h-[1500px] rounded-lg m-3 mt-16'>
         <div 
           className='p-4 w-full text-center text-4xl font-bold'
         >

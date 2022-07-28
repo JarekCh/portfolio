@@ -60,10 +60,10 @@ const Projects = () => {
   )})
 
   return (
-    <section className='w-full h-full mt-11 text-gray-300 bg-[#0a192f]'>
+    <section className='w-full h-full text-gray-300 bg-[#0a192f]'>
       <div className='max-w-[1600px] mx-auto p-4 flex flex-col items-center w-full h-full'>
         <header className='pb-8 flex flex-col items-center'>
-          <title className='text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600'>Projects</title>
+          <title className='text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600 mt-20'>Projects</title>
           <p className='py-6'>Check out some of my recent projects</p>
         </header>
         {/* projects container */}
