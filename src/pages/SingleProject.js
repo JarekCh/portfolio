@@ -7,8 +7,7 @@ import {MdLiveTv } from 'react-icons/md';
 const SingleProject = () => {
   const { projectId } = useParams();
   const project = tempProjects.find((project) => project.id === projectId);
-
-  console.log("🚀 ~ file: SingleProject.js ~ line 8 ~ SingleProject ~ project", project)
+  
 
   const techStack = project.stack.map((item) => {    
     return (
@@ -20,8 +19,8 @@ const SingleProject = () => {
   });  
   
   return (
-    <section className='w-full sm:h-full md:h-screen mt-14 pb-2 pl-2 pr-2 pt-10 text-gray-300 bg-[#0a192f] flex justify-center items-top'>      
-      <article className='shadow-xl flex flex-col  bg-slate-500 max-w-[900px] max-h-[1100px] rounded-lg m-3'>
+    <section className='w-full h-screen mt-14 pb-2 px-2 pt-10 text-gray-300 bg-[#0a192f] flex justify-center items-top'>      
+      <article className='shadow-inner shadow-slate-200 flex flex-col  bg-slate-500 max-w-[900px] max-h-[1100px] h-auto rounded-lg m-3'>
         <div 
           className='p-4 w-full text-center text-4xl font-bold'
         >
@@ -29,12 +28,12 @@ const SingleProject = () => {
         </div>
         <div className='flex flex-col items-center'>
           <img src={project.image} className='w-10/12 p-4'/> 
-          {/* techStac container */}
+          {/* techStack container */}
           <div className='p-4 lg:w-9/12 sm:w-full grid grid-cols-2 md:grid-cols-3 max-w-lg'>
             {techStack}
           </div>
         </div>
-        <p className='p-4'>{project.description}</p>
+        <p className='p-4 mx-5'>{project.description}</p>
         {/* btn container */}
         <div className='flex justify-evenly mb-2'>   
           <div>

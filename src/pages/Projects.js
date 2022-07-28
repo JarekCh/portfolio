@@ -31,27 +31,26 @@ const Projects = () => {
           {name}
         </div>        
         <div className='pt-8 text-center m-2 grid grid-cols-2'>
-          <div>
-            <a href='/' className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-              Live
-            </a>
-          </div>
-          <div>
-            <a href='/' className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-              Code
-            </a >
-          </div>
+          <Link 
+            to={'/'}
+            className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'
+          >
+            Live
+          </Link>
+          <Link 
+            to={'/'}
+            className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'
+          >
+            Code
+          </Link>
         </div>
         <div className='flex justify-center'>
-          <button
-              className='w-10/12 text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'         
+          <Link
+              className='w-10/12 text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'
+              to={`/projects/${project.id}`}     
           >
-            <Link 
-              to={`/projects/${project.id}`}
-            >
-              More info...
-            </Link>
-          </button>
+            More info...
+          </Link>
         </div>
       </div>
     </article>

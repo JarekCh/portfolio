@@ -5,9 +5,8 @@ const Contact = () => {
   const rowsResize = () => {
     if(window.innerWidth < 450) return "3";
     if(window.innerWidth > 450) return "10";
-  };  
+  };    
   
-  // TODO: add links linek a
   return (
     <section className='w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center p-4'>
         <div className='flex flex-col items-center mt-11'>

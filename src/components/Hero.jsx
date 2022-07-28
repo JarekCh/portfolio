@@ -1,5 +1,6 @@
 import React from 'react';
 import { HiArrowNarrowRight } from 'react-icons/hi';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   // TODO: ADD motion library 
@@ -16,13 +17,13 @@ const Hero = () => {
         </h2>
         <p className='text-[#8892b0] py-4 max-w-[700px]'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic alias, officiis cupiditate aut magnam veritatis itaque deserunt. Unde, quam qui? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, ut!</p>
-        <div>
+        <Link to='/projects'>          
           <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600'>View Projects 
             <span className='group-hover:rotate-90 duration-300'>
               <HiArrowNarrowRight className='ml-3' />
-            </span>
+            </span>            
           </button>
-        </div>
+        </Link>
       </div>
     </section>
   )
