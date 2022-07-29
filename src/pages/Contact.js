@@ -20,7 +20,7 @@ const Contact = () => {
         {/* button container */}
         <div className='lg:hidden'>
           <a 
-            className='text-white w-32 border-2 hover:bg-pink-600 hover:border-pink-600 hover:scale-110 duration-200 px-4 py-1 my-4 flex items-center'
+            className='text-white w-32 border-2 hover:bg-pink-600 hover:border-pink-600 hover:scale-110 duration-200 px-4 py-1 my-4 flex items-center transition ease-in-out delay-150'
             href='https://www.linkedin.com/in/jaroslaw-charchula/'
           >
             Linkedin

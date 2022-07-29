@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Logo from '../assets/img/logo.png';
-import {FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa';
-import {HiOutlineMail} from 'react-icons/hi';
+import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { HiOutlineMail} from 'react-icons/hi';
 import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
 
