@@ -9,18 +9,19 @@ const SingleProject = () => {
   const project = tempProjects.find((project) => project.id === projectId);
   
   // TODO: with backend add key prop
+  // TODO fix css 
   const techStack = project.stack.map((item, i) => {    
     return (
       <div key={i} className='flex items-center gap-2 mr-2 ml-2'>
         <FaGithub size={20}/>
-        <p className='mr-2 text-md md:text-lg'>{item.name}</p>
+        <p className='mr-2 text-sm md:text-lg'>{item.name}</p>
       </div>
     );
   });  
   
   return (
-    <main className='w-full h-full 2xl:h-screen px-2 pt-10 pb-40 text-gray-300 bg-[#0a192f] flex justify-center box-content'>      
-      <article className='shadow-inner shadow-slate-200 flex flex-col bg-slate-500 max-w-[900px] max-h-[1400px] rounded-lg m-3 mt-16 '>
+    <main className='w-full h-[calc(100%-80px)] text-gray-300  flex justify-center box-content'>      
+      <article className='shadow-inner shadow-slate-200 flex flex-col bg-slate-500 max-w-[900px] max-h-[1400px] rounded-lg m-3 mt-20'>
         <div 
           className='p-4 w-full text-center md:text-4xl font-bold'
         >
@@ -33,7 +34,7 @@ const SingleProject = () => {
             {techStack}
           </div>
         </div>
-        <p className='p-4 mx-5 text-md sm:text-lg'>{project.description}</p>
+        <p className='p-4 mx-5 text-sm sm:text-lg'>{project.description}</p>
         {/* btn container */}
         <div className='flex justify-evenly mb-2'>   
           <div>
