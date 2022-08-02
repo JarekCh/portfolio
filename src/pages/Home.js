@@ -1,14 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { client } from '../client';
 import About from '../components/About';
 import Hero from '../components/Hero';
-import Technologies from '../components/Technologies';
+import Skills from '../components/Skills';
 
 const Home = () => {
+  const [data, setData] = useState([]);  
+
+  useEffect(() =>{
+    const query = "*[_type == 'home']{'about': about.body,'hero': hero.body,skills[]{name,'image': icon.asset->url}}"
+    
+    client.fetch(query)
+    .then((data) => {
+      setData(data)
+    })
+    .catch(console.error)    
+  }, []);
+
   return (
     <main>      
-        <Hero />
-        <About />
-        <Technologies />        
+        <Hero data={data}/>
+        <About data={data}/>
+        <Skills data={data}/>        
     </main>
   );
 };
