@@ -1,9 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import tempProjects from '../assets/temp/temp_projects';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import {client} from '../client';
 
 const Projects = () => {  
+  const [test, setTest] = useState([]);
+  console.log("🚀 ~ file: Projects.js ~ line 9 ~ Projects ~ test", test)
+  
+  useEffect(() => {
+    const query = '*[_type == "projects"]{_id, name, codeLink, projectLink, slug,"techIcons":techIcons[]{name, "url":icon.asset->url}}';
+    
+
+    client.fetch(query)
+      .then((data) => {
+        setTest(data)
+      })
+  }, []);
+
+//     *[_type == 'projects']{
+//   _id,
+//   slug,
+//   'techIcons':techIcons[]{
+//   name,
+//   'url':icon.asset->url
+// }
+
+// }
+
   const projects = tempProjects.map((project) => {
     const {id, name, image } = project;
     return (
