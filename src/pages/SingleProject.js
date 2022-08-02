@@ -7,10 +7,9 @@ import { motion } from 'framer-motion';
 
 const SingleProject = () => {
   const { projectId } = useParams();
-  const project = tempProjects.find((project) => project.id === projectId);
+  const project = tempProjects.find((project) => project.id === projectId);  
   
-  // TODO: with backend add key prop
-  // TODO fix css 
+  
   const techStack = project.stack.map((item, i) => {    
     return (
       <div key={i} className='flex items-center gap-2 mr-2 ml-2'>
@@ -60,10 +59,11 @@ const SingleProject = () => {
               <FaGithub size={20} className='ml-2'/>             
             </a>
           </div>    
-        </div>
+        </div>      
       </motion.article>
     </main>
   )
 }
 
 export default SingleProject
+
