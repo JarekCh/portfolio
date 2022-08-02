@@ -1,6 +1,8 @@
-import React from 'react'
+import React from 'react';
 
-const About = () => {
+
+const About = ({ data }) => {
+  
   return (
     <section id='about' className='w-full h-screen text-gray-300'>      
       <div className='flex flex-col justify-center items-center w-full h-full'>
@@ -16,9 +18,8 @@ const About = () => {
             <div className='sm:text-right text-4xl font-bold'>
               <p>Hi. I'm Jarek, nice to meet you. Please take a look around.</p>
             </div>
-            <div>
-              {/* TODO : fill with correct content  */}
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic alias, officiis cupiditate aut magnam veritatis itaque deserunt. Unde, quam qui? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, ut! Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic alias, officiis cupiditate aut magnam veritatis itaque deserunt. Unde, quam qui? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, ut!</p>  
+            <div>              
+              <p>{data[0]?.about}</p>  
             </div>
           </div>
       </div>

@@ -2,7 +2,6 @@
 
 # dependencies
 node_modules
-/backend_sanity_portfolio/node_modules
 /.pnp
 .pnp.js
 

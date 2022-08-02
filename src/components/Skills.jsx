@@ -1,12 +1,12 @@
 import React from 'react';
 import Exp from '../assets/temp/temp_epx';
 
-const Technologies = () => {
-  const skills = Exp.map((item) => {
-    const {id, name, image} = item;
+const Skills = ({ data }) => {
+  const skills = data[0]?.skills?.map((item, i) => {
+    const {name, image} = item;
 
     return (
-      <div id='technologies' className='shadow-md pt-2 shadow-[#040c16] bg-slate-500 rounded-sm hover:scale-110 duration-500' key={id}>
+      <div id='skills' className='shadow-md pt-2 shadow-[#040c16] bg-slate-500 rounded-sm hover:scale-110 duration-500' key={i}>
         <img className='w-20 mx-auto' src={image} alt={name} />
         <p>{name}</p>
       </div>
@@ -29,4 +29,4 @@ const Technologies = () => {
   )
 }
 
-export default Technologies
+export default Skills

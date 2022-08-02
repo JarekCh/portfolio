@@ -3,6 +3,7 @@ import tempProjects from '../assets/temp/temp_projects';
 import { useParams } from 'react-router-dom';
 import {FaGithub} from 'react-icons/fa';
 import {MdLiveTv } from 'react-icons/md';
+import { motion } from 'framer-motion';
 
 const SingleProject = () => {
   const { projectId } = useParams();
@@ -21,7 +22,11 @@ const SingleProject = () => {
   
   return (
     <main className='w-full h-[calc(100%-80px)] text-gray-300  flex justify-center box-content'>      
-      <article className='shadow-inner shadow-slate-200 flex flex-col bg-slate-500 max-w-[900px] max-h-[1400px] rounded-lg m-3 mt-20'>
+      <motion.article className='shadow-inner shadow-slate-200 flex flex-col bg-slate-500 max-w-[900px] max-h-[1400px] rounded-lg m-3 mt-20'
+        animate={{scale: 1}}
+        initial={{scale: 0}} 
+        transition={{duration: 0.7}}  
+      >
         <div 
           className='p-4 w-full text-center md:text-4xl font-bold'
         >
@@ -56,7 +61,7 @@ const SingleProject = () => {
             </a>
           </div>    
         </div>
-      </article>
+      </motion.article>
     </main>
   )
 }

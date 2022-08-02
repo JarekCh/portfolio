@@ -19,43 +19,43 @@ const Navbar = () => {
       <nav className='hidden md:flex'>
         <ul className='flex'>
           <li className='hover:scale-125'>
-            <HashLink to='/#hero' smooth>Home</HashLink>          
+            <HashLink to='/#hero' smooth>HOME</HashLink>          
           </li>
           <li className='hover:scale-125'>
-            <HashLink to='/#about' smooth>About</HashLink> 
+            <HashLink to='/#about' smooth>ABOUT</HashLink> 
           </li>
           <li className='hover:scale-125'>
-            <HashLink to='/#technologies' smooth>Technologies</HashLink> 
+            <HashLink to='/#skills' smooth>SKILLS</HashLink> 
           </li>
           <li className='hover:scale-125'>
-            <Link to='/projects'>Projects</Link> 
+            <Link to='/projects'>PROJECT</Link> 
           </li>
           <li className='hover:scale-125'>
-            <Link to='/contact'>Contact</Link> 
+            <Link to='/contact'>CONTACT</Link> 
           </li>
         </ul>
       </nav>
 
       {/* Hamburger */}
-      <div onClick={handleClick} className='md:hidden z-10 cursor-pointer'>
+      <div onClick={handleClick} className='md:hidden cursor-pointer '>
         {!nav ? <FaBars /> : <FaTimes />}
       </div>
       {/* mobile menu */}
-        <ul className= {!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen  flex flex-col justify-center items-center'}>
+        <ul className= {!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen  flex flex-col justify-center items-center bg-[#0a192f]'}>
           <li onClick={handleClick} className='py-6 text-4xl hover:scale-110'>
-            <HashLink to='/#hero' smooth>Home</HashLink> 
+            <HashLink to='/#hero' smooth>HOME</HashLink> 
           </li>
           <li onClick={handleClick} className='py-6 text-4xl hover:scale-110'>
-            <HashLink to='/#about' smooth>About</HashLink> 
+            <HashLink to='/#about' smooth>ABOUT</HashLink> 
           </li>
           <li onClick={handleClick} className='py-6 text-4xl hover:scale-110'>
-            <HashLink to='/#technologies' smooth>Technologies</HashLink> 
+            <HashLink to='/#skills' smooth>SKILLS</HashLink> 
           </li>
           <li onClick={handleClick} className='py-6 text-4xl hover:scale-110'>
-            <Link to='/projects'>Projects</Link> 
+            <Link to='/projects'>PROJECT</Link> 
           </li>
           <li onClick={handleClick} className='py-6 text-4xl hover:scale-110'>
-            <Link to='/contact'>Contact</Link> 
+            <Link to='/contact'>CONTACT</Link> 
           </li>
         </ul>
 

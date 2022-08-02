@@ -2,31 +2,20 @@ import React, { useState, useEffect } from 'react';
 import tempProjects from '../assets/temp/temp_projects';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import {client} from '../client';
+import { client } from '../client';
 
 const Projects = () => {  
-  const [test, setTest] = useState([]);
-  console.log("🚀 ~ file: Projects.js ~ line 9 ~ Projects ~ test", test)
+  const [test, setTest] = useState([]);     
   
   useEffect(() => {
-    const query = '*[_type == "projects"]{_id, name, codeLink, projectLink, slug,"techIcons":techIcons[]{name, "url":icon.asset->url}}';
-    
+    const query = '*[_type == "projects"]{_id, name, codeLink, projectLink, slug,"techIcons":techIcons[]{name, "url":icon.asset->url}}';    
 
-    client.fetch(query)
-      .then((data) => {
-        setTest(data)
-      })
+  client.fetch(query)
+    .then((data) => {
+      setTest(data)
+    })
+    .catch(console.error)
   }, []);
-
-//     *[_type == 'projects']{
-//   _id,
-//   slug,
-//   'techIcons':techIcons[]{
-//   name,
-//   'url':icon.asset->url
-// }
-
-// }
 
   const projects = tempProjects.map((project) => {
     const {id, name, image } = project;
@@ -60,20 +49,20 @@ const Projects = () => {
         <div className='pt-8 text-center m-2 grid grid-cols-2'>
           <Link 
             to={'/'}
-            className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'
+            className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg hover:scale-110 duration-200'
           >
             Live
           </Link>
           <Link 
             to={'/'}
-            className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'
+            className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg hover:scale-110 duration-200'
           >
             Code
           </Link>
         </div>
         <div className='flex justify-center'>
           <Link
-              className='w-10/12 text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'
+              className='w-10/12 text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg hover:scale-110 duration-200'
               to={`/projects/${project.id}`}     
           >
             More info...
