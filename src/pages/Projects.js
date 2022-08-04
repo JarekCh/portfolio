@@ -24,7 +24,10 @@ const Projects = () => {
 
   client.fetch(query)
     .then((data) => {
-      setProjectsData(data)
+      const sortedData = data.sort((a, b) => {
+      return new Date(b.date) - new Date(a.date)
+       })
+      setProjectsData(sortedData)
       setLoading(false);
     })
     .catch(console.error)

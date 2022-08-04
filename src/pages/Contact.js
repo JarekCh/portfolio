@@ -103,7 +103,20 @@ const Contact = () => {
             />
             <button 
               type="submit"                          
-              className='text-white border-2 hover:bg-pink-600 hover:border-pink-600 hover:scale-110 duration-200 px-4 py-3 my-8 mx-auto flex items-center' 
+              className='
+                text-white 
+                border-2
+                hover:bg-pink-600
+                hover:border-pink-600 
+                hover:scale-110 
+                duration-200 
+                px-4 
+                py-3 
+                my-8 
+                mx-auto 
+                flex 
+                items-center 
+                rounded-sm' 
             >
               {!loading ? "Let's Collaborate" : "Sending..."}            
             </button>
