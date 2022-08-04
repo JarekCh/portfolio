@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { client } from '../client';
+import tempImg from '../assets/img/tempImg.png'
 import Loading from '../components/Loading';
 
 
@@ -35,7 +36,7 @@ const Projects = () => {
     const {title, codeLink, projectsLink, imageUrl, slug, date, projectInfo, inProgres } = projects;
     return (
     <motion.article 
-      style={{backgroundImage: !inProgres ? `url(${imageUrl.url})` : `url(https://cdn.pixabay.com/photo/2017/06/20/08/12/maintenance-2422173_960_720.png)`}}
+      style={{backgroundImage: !inProgres ? `url(${imageUrl.url})` : `url(${tempImg})`}}
       className='
         shadow-lg shadow-[#040c16] 
         group 
@@ -94,7 +95,7 @@ const Projects = () => {
         <div className='flex justify-center'>
           <Link
               className='w-10/12 text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg hover:scale-110 duration-200'
-              to={`/projectss/${projects.slug.current}`}     
+              to={`/projects/${projects.slug.current}`}     
           >
             More info...
           </Link>

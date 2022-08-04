@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-
 import { useParams } from 'react-router-dom';
 import { FaGithub } from 'react-icons/fa';
 import { MdLiveTv } from 'react-icons/md';
 import { motion } from 'framer-motion';
 import { client } from '../client';
 import Loading from '../components/Loading';
+import tempImg from '../assets/img/tempImg.png'
 
 const SingleProject = () => {
   const [isLoading, setLoading] = useState(true); 
@@ -26,6 +26,7 @@ const SingleProject = () => {
         "techIcons":techIcons[]{name, "url":icon.asset->url}, 
         "imageUrl":imgUrl{"url":asset->url},
         projectInfo,
+        inProgres
       }`;    
 
     client.fetch(query)
@@ -53,9 +54,9 @@ const SingleProject = () => {
         </div>
         <div className='flex flex-col items-center'>
           <img 
-            src={singleProject.imageUrl.url} 
+            src={singleProject?.imageUrl?.url || tempImg} 
             alt={singleProject.title} 
-            className='w-9/12 rounded-md'
+            className='w-7/12 rounded-md'
           /> 
           {/* techStack container */}
           <div className='p-4 lg:w-9/12 sm:w-full grid grid-cols-2 md:grid-cols-3 max-w-lg'>
@@ -77,7 +78,7 @@ const SingleProject = () => {
               className='text-white w-32 border-2 hover:bg-pink-600 hover:border-pink-600 hover:scale-110 duration-200 px-4 py-1 my-4 flex justify-center'
               href={singleProject.projectLink}
             >
-              Live
+              {!singleProject.inProgres ? "Live" : "N/A"}
               <MdLiveTv size={20} className='ml-2'/>                     
             </a>
           </div>   

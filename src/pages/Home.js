@@ -6,8 +6,8 @@ import Loading from '../components/Loading';
 import Skills from '../components/Skills';
 
 const Home = () => {
-  const [isLoading, setLoading] = useState(true); 
   const [data, setData] = useState([]);  
+  const [isLoading, setLoading] = useState(true); 
 
   useEffect(() =>{
     const query = `*[_type == 'home']{
