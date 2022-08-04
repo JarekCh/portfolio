@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { client } from '../client';
-import {FaGithub, FaLinkedin } from 'react-icons/fa';
-import Projects from './Projects';
+import ContactBtns from '../components/ContactBtns';
+
 
 const Contact = () => {
   const rowsResize = () => {
@@ -44,7 +44,7 @@ const Contact = () => {
         <div className='flex flex-col items-center mt-11'>
           {!isFormSubmitted ? (
             <>
-              <p className='text-4xl font-bold inline border-b-4 border-pink-600 text-gray-300'>
+              <p className='text-4xl font-bold inline border-b-4 border-pink-600 text-gray-300 pt-8'>
                 Contact              
               </p>
               <p className='text-gray-300 py-4 text-center'>
@@ -58,22 +58,8 @@ const Contact = () => {
           }
         </div>
         {/* button container */}
-        <div className='lg:hidden'>
-          <a 
-            className='text-white w-32 border-2 hover:bg-pink-600 hover:border-pink-600 hover:scale-110 duration-200 px-4 py-1 my-4 flex items-center transition ease-in-out delay-150'
-            href='https://www.linkedin.com/in/jaroslaw-charchula/'
-          >
-            Linkedin
-            <FaLinkedin size={20} className='ml-2'/>                     
-          </a>
-          <a 
-            className='text-white w-32 border-2 hover:bg-pink-600 hover:border-pink-600 hover:scale-110 duration-200 px-4 py-1 my-4 mx-auto flex items-center'
-            href='https://github.com/JarekCh/'
-          >
-            Github
-            <FaGithub size={20} className='ml-5'/>             
-          </a>
-        </div>
+        <ContactBtns />
+
         {!isFormSubmitted ? (          
           <form className='flex flex-col max-w-[900px] w-full'>
             <input 

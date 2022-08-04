@@ -1,5 +1,4 @@
 import React from 'react';
-import Exp from '../assets/temp/temp_epx';
 
 const Skills = ({ data }) => {
   const skills = data[0]?.skills?.map((item, i) => {
