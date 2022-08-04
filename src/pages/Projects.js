@@ -8,7 +8,6 @@ import Loading from '../components/Loading';
 const Projects = () => {  
   const [isLoading, setLoading] = useState(true); 
   const [projectsData, setProjectsData] = useState([]);   
-  console.log("🚀 ~ file: Projects.js ~ line 11 ~ Projects ~ projectsData", projectsData)
   
   useEffect(() => {
     const query = `*[_type == "projects"]

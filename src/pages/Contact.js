@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { client } from '../client';
 import ContactBtns from '../components/ContactBtns';
 
@@ -8,12 +8,25 @@ const Contact = () => {
     if(window.innerWidth < 450) return "3";
     if(window.innerWidth > 450) return "10";
   };   
-  
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+
+  const initialForm = { name: '', email: '', message: '' };
+
+  const [formData, setFormData] = useState(initialForm);
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const { name, email, message } = formData;
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsFormSubmitted(false);
+      setFormData(initialForm);
+    }, 5000);
+
+    return () => clearTimeout(timeout);
+
+  }, [isFormSubmitted])
+  
 
   const handleChangeInput = (e) => {
     const { name, value } = e.target;
@@ -59,15 +72,16 @@ const Contact = () => {
         </div>
         {/* button container */}
         <ContactBtns />
-
         {!isFormSubmitted ? (          
-          <form className='flex flex-col max-w-[900px] w-full'>
+          <form className='flex flex-col max-w-[900px] w-full' onSubmit={handleSubmit} >
             <input 
               className='bg-[#ccd6f6] p-2' 
-              type="text" placeholder='Name' 
+              type="text" 
+              placeholder='Name' 
               name='name' 
               onChange={handleChangeInput}
               value={name}
+              required               
             />
             <input 
               className='my-4 p-2 bg-[#ccd6f6]' 
@@ -76,6 +90,7 @@ const Contact = () => {
               name='email' 
               onChange={handleChangeInput}
               value={email}
+              required               
             />
             <textarea 
               className='bg-[#ccd6f6] p-2' 
@@ -83,11 +98,11 @@ const Contact = () => {
               value={message}
               onChange={handleChangeInput} 
               rows={rowsResize()}  
-              placeholder='Message' 
+              placeholder='Message'
+              required                 
             />
             <button 
-              type="button"
-              onClick={handleSubmit}
+              type="submit"                          
               className='text-white border-2 hover:bg-pink-600 hover:border-pink-600 hover:scale-110 duration-200 px-4 py-3 my-8 mx-auto flex items-center' 
             >
               {!loading ? "Let's Collaborate" : "Sending..."}            
