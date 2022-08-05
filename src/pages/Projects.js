@@ -64,7 +64,7 @@ const Projects = () => {
           <div className='text-center font-bold'>          
             {title}
           </div>
-        {!inProgres && <>
+        {!inProgres ? <>
           <div>
             <p>{`Finished on: ${new Date(date).toLocaleDateString()}`}</p>            
           </div>
@@ -74,8 +74,8 @@ const Projects = () => {
             </p>
           </div>
         </>
-        }
-        {inProgres && <div className='text-2xl lg:text-4xl relative top-14 -right-3 -rotate-45 opacity-40 text-red-600 font-bold'>Under Developement</div>}
+        :
+        <div className='text-2xl lg:text-4xl relative top-14 -right-3 -rotate-45 opacity-40 text-red-600 font-bold'>Under Developement</div>}
       </div>
       <div className='hidden group-hover:block opacity-0 group-hover:opacity-100'>        
         <div className='text-2xl font-bold text-white tracking-wider text-center'>

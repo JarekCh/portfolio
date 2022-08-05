@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
-  const [nav, setNav] = useState(false)  
+  const [nav, setNav] = useState(false);  
   const handleClick = () => setNav((prevValue => !prevValue));
 
   return (
@@ -79,12 +79,12 @@ const Navbar = () => {
             </a>
           </li>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
-            <a
+            <Link
               className='flex justify-between items-center w-full text-gray-300'
-              href='/contact'
+              to='/contact'
             >
               Email <HiOutlineMail size={30} />
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

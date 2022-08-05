@@ -63,7 +63,7 @@ const SingleProject = () => {
             {singleProject.techIcons.map((icon, i) => {
                   return (
                           <div key={i} className='flex items-center gap-2 mr-2 ml-2'>
-                            <img src={icon.url} alt={icon.title}/>
+                            <img className='w-6' src={icon.url} alt={icon.title}/>
                             <p className='mr-2 text-sm md:text-lg'>{icon.name}</p>
                           </div>
                         );
