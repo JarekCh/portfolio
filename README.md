@@ -19,4 +19,4 @@ My portfolio site. Enjoy.
 
 ## Live
 
-https://jaroslawcharchula.netlify.app/
+https://jaroslawcharchula.eu
