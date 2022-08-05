@@ -19,4 +19,4 @@ My portfolio site. Enjoy.
 
 ## Live
 
-https://jaroslawcharchula.eu
+jaroslawcharchula.eu
