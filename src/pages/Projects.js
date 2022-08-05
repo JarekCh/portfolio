@@ -16,7 +16,7 @@ const Projects = () => {
     { date,
       title, 
       codeLink,
-      projectsLin, 
+      projectLink, 
       slug,       
       "imageUrl":imgUrl{"url":asset->url},
       inProgres,
@@ -37,7 +37,7 @@ const Projects = () => {
   if (isLoading) return <Loading />;
 
   const projects = projectsData.map((projects, i) => {
-    const {title, codeLink, projectsLink, imageUrl, slug, date, projectInfo, inProgres } = projects;
+    const {title, codeLink, projectLink, imageUrl, slug, date, projectInfo, inProgres } = projects;
     return (
     <motion.article 
       style={{backgroundImage: !inProgres ? `url(${imageUrl.url})` : `url(${tempImg})`}}
@@ -80,26 +80,26 @@ const Projects = () => {
         <div className='text-2xl lg:text-4xl relative top-14 -right-3 -rotate-45 opacity-40 text-red-600 font-bold'>Under Developement</div>}
       </main>
       <div className='hidden group-hover:block opacity-0 group-hover:opacity-100'>        
-        <div className='text-2xl font-bold text-white tracking-wider text-center'>
+        <div className='text-2xl m-2 font-bold text-white tracking-wider text-center'>
           {title}
         </div>        
         <div className='pt-8 text-center m-2 grid grid-cols-2'>
           <a 
-            href={projectsLink}
-            className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg hover:scale-110 duration-200'
+            href={projectLink}
+            className='text-center w-28 rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg hover:scale-110 duration-200'
           >
             {!inProgres ? (title === "Portfolio" ? "N/A" : "Live") : "N/A"}
           </a>
           <a 
             href={codeLink}
-            className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg hover:scale-110 duration-200'
+            className='text-center w-28 rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg hover:scale-110 duration-200'
           >
             Code
           </a>
         </div>
         <div className='flex justify-center'>
           <Link
-              className='w-10/12 text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg hover:scale-110 duration-200'
+              className='w-52 text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg hover:scale-110 duration-200'
               to={`/projects/${projects.slug.current}`}     
           >
             More info...

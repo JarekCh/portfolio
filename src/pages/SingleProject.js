@@ -78,7 +78,7 @@ const SingleProject = () => {
               className='text-white w-32 border-2 hover:bg-pink-600 hover:border-pink-600 hover:scale-110 duration-200 px-4 py-1 my-4 flex justify-center'
               href={singleProject.projectLink}
             >
-              {!singleProject.inProgres ? "Live" : "N/A"}
+              {!singleProject.inProgres ? (singleProject.title === "Portfolio" ? "N/A" : "Live") : "N/A"}
               <MdLiveTv size={20} className='ml-2'/>                     
             </a>
           </div>   
