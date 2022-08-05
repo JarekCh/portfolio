@@ -9,6 +9,7 @@ import Loading from '../components/Loading';
 const Projects = () => {  
   const [isLoading, setLoading] = useState(true); 
   const [projectsData, setProjectsData] = useState([]);   
+  console.log("🚀 ~ file: Projects.js ~ line 12 ~ Projects ~ projectsData", projectsData)
   
   useEffect(() => {
     const query = `*[_type == "projects"]
@@ -87,7 +88,7 @@ const Projects = () => {
             href={projectsLink}
             className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg hover:scale-110 duration-200'
           >
-            {!inProgres ? "Live" : "N/A"}
+            {!inProgres ? (title === "Portfolio" ? "N/A" : "Live") : "N/A"}
           </a>
           <a 
             href={codeLink}
