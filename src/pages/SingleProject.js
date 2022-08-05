@@ -11,9 +11,6 @@ const SingleProject = () => {
   const [isLoading, setLoading] = useState(true); 
   const [singleProject, setSingleProject] = useState(null); 
   const { slug } = useParams();
-  console.log("🚀 ~ file: SingleProject.js ~ line 14 ~ SingleProject ~ slug", slug)
-
-
 
   useEffect(() => {
     const query = `*[slug.current == "${slug}"]{ 

@@ -49,7 +49,7 @@ const Contact = () => {
         setLoading(false);
         setIsFormSubmitted(true);
       })
-      .catch((err) => console.log(err));
+      .catch(console.error);
   };
   
   return (
