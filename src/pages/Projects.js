@@ -60,7 +60,7 @@ const Projects = () => {
       initial={{scale: 0}} 
       transition={{duration: 0.7}}  
     >
-      <div className='flex flex-col first-layer content-start gap-3 w-full h-full p-4 text-orange lg:text-lg font-normal bg-black/60'>
+      <main className='flex flex-col first-layer content-start gap-3 w-full h-full p-4 text-orange lg:text-lg font-normal bg-black/60'>
           <div className='text-center font-bold'>          
             {title}
           </div>
@@ -68,15 +68,16 @@ const Projects = () => {
           <div>
             <p>{`Finished on: ${new Date(date).toLocaleDateString()}`}</p>            
           </div>
-          <div>
-            <p className=''>
-              {projectInfo.length > 100 ? `${projectInfo.substring(0, 100)}...` : projectInfo}
+          <section className='pt-8'>
+            <div>Description:</div>
+            <p className='text-sm'>
+              {projectInfo.length > 120 ? `${projectInfo.substring(0, 120)}...` : projectInfo}
             </p>
-          </div>
+          </section>
         </>
         :
         <div className='text-2xl lg:text-4xl relative top-14 -right-3 -rotate-45 opacity-40 text-red-600 font-bold'>Under Developement</div>}
-      </div>
+      </main>
       <div className='hidden group-hover:block opacity-0 group-hover:opacity-100'>        
         <div className='text-2xl font-bold text-white tracking-wider text-center'>
           {title}
