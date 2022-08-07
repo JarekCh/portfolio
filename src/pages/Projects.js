@@ -115,7 +115,7 @@ const Projects = () => {
           <title className='text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600 mt-20'>Projects</title>
           <p className='py-6'>Check out some of my recent projects</p>
         </header>
-        {/* projectss container */}
+        {/* projects container */}
         <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4 xl:grid-cols-4'>
           {projects}
         </div>
